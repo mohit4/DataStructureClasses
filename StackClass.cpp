@@ -1,12 +1,14 @@
 #include<iostream>
 #include<assert.h>
 using namespace std;
+
+template <typename T>
 struct Node
 {
-    int data;
-    Node *next;
+    T data;
+    Node<T> *next;
 };
-Node *newnode(int data)
+Node<T> *newnode(T data)
 {
     Node *temp = new Node;
     temp->data = data;
